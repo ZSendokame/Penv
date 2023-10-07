@@ -15,12 +15,13 @@ class Enviroment:
         enviroment = {}
 
         for line in file.read().split('\n'):
-            key, value = line.split('=')
+            key, value = line.split('=', 1)
+            value = literal_eval(value)
 
             if isinstance(value, str):
                 value = value.format(**enviroment)
 
-            enviroment[key] = literal_eval(value)
+            enviroment[key] = value
 
         file.close()
 
