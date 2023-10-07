@@ -20,7 +20,7 @@ import penv
 
 env = penv.Enviroment('.env')
 
-print(env.get('url'))  # -> "http://localhost:5000"
+print(env['url'])  # -> "http://localhost:5000"
 ```
 
 It's worth noting that ``port`` has no quotes and it's a number, therefore, it will be an INT. Penv needs an strict syntax, but it will not be harder than before. Also, no use for ``os`` here, and it will still merge both your systems' enviroment variables and the files' variables (**File variables *will* override your systems' variables**).
