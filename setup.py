@@ -4,7 +4,7 @@ long_description = open('./README.md')
 
 setup(
     name='Penv',
-    version='1.0.0',
+    version='1.0.1',
     url='https://github.com/ZSendokame/Penv',
     license='MIT license',
     author='ZSendokame',
