@@ -7,6 +7,9 @@ class Enviroment:
     def __init__(self, env: os.PathLike = '.env') -> None:
         self.env = {**os.environ, **self.__parse__(env)}
 
+    def __getitem__(self, env) -> Any:
+        return self.get(env, None)
+
     def get(self, key: str, default: Any = None) -> Any:
         return self.env.get(key, default)
 
